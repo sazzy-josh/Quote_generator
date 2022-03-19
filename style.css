@@ -242,7 +242,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='180' height='180' viewBo
 
 figure{margin:0;transform:translate(-50%,-50%) rotate(0deg) scale(1.4,1.4);position:absolute;left:50%;top:50%;border-radius:150px;box-sizing:border-box;animation:rotation 20s infinite linear;}
 
-figure div:after{content:"";width:20px;height:20px;border:1px solid #fff;box-sizing:border-box;position:absolute;left:20px;top:20px;animation:shuffle 2s infinite;}
+figure div:after{content:"";width:40px;height:40px;border:1px solid #fff;box-sizing:border-box;position:absolute;left:20px;top:20px;animation:shuffle 2s infinite;}
 
 figure div:nth-child(1){transform:rotate(0deg)}
 figure div:nth-child(1):after{animation-delay:-0.5s;}
