@@ -83,8 +83,11 @@ background-image: url("data:image/svg+xml,%3Csvg width='180' height='180' viewBo
 #getQuote{
     position: absolute;
     bottom: -20px;
-    font-size: 35px;
+    font-size: 30px;
     width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 50px;
     cursor: pointer;
     background-color:rgba(116, 91, 192, 0.5);
@@ -100,13 +103,20 @@ background-image: url("data:image/svg+xml,%3Csvg width='180' height='180' viewBo
     -o-transition: all 0.8s ease-in-out;
 }
 #getQuote:hover{
-    background-color: rgba(90, 42, 14, 0.7);
-    box-shadow: 0 0 0.5 green;
-    transform: scale(1.5) rotate(360deg);
-    -webkit-transform: scale(1.5) rotate(360deg);
-    -moz-transform: scale(1.5) rotate(360deg);
-    -ms-transform: scale(1.5) rotate(360deg);
-    -o-transform: scale(1.5) rotate(360deg);
+     background-color: rgba(61, 199, 209, 0.7);
+     box-shadow: 0 0 0.5 green;
+     transform: scale(1.3) rotate(360deg);
+     -webkit-transform: scale(1.3) rotate(360deg);
+     -moz-transform: scale(1.3) rotate(360deg);
+     -ms-transform: scale(1.3) rotate(360deg);
+     -o-transform: scale(1.3) rotate(360deg);
+}
+#rotate{
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
 }
 #tweet{
     font-size: 20px;

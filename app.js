@@ -6,17 +6,22 @@ let quoteText = document.getElementById('text');
 let result = []
 let container = document.getElementById('quote')
 let loader = document.getElementById("load")
-
+let rotate = document.getElementById('rotate')
+var rot = 360;
 //remove loader on load of window
  window.addEventListener("load", () =>{
     loader.classList.add('vanish')
 } )
 
-
+rotate.addEventListener('click',() => {
+  rotate.style = 'transform: rotate(' + rot + 'deg)';
+  rot +=360;
+  newQuote.style.color = "black" 
+})
 
 //generate new quote and render it to the DOM
 function generateQuote(data){
-      newQuote.style.transform = 'rotate(-360deg)'
+      // newQuote.style.transform = "rotate(-360deg)"
       result = data[Math.floor(Math.random()*data.length)];
     setTimeout(()=>{
       if (result.text.length > 130) {
@@ -37,7 +42,7 @@ function generateQuote(data){
        if (!result.author) {
         authur.textContent = "-Rene ✨" 
        } else {
-        authur.textContent = "-"+result.author  
+        authur.textContent = "-"+result.author + "💭" 
        }  
     },2000)    
 }
@@ -49,16 +54,13 @@ function retweet(){
 }
 tweet.addEventListener('click', retweet)
 
-//rotates the spinner on click of the button
- function rotate(){
-   newQuote.style.transform = "rotate(-360deg)" 
- }
+
+ 
 newQuote.addEventListener('click',getQuote)
 
 //Fetch API
  async function getQuote(){  
      try {
-        
          let response = await fetch(baseurl);
          let data = await response.json();
          generateQuote(data);
