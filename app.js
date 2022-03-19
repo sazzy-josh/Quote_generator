@@ -15,8 +15,8 @@ var rot = 360;
 
 rotate.addEventListener('click',() => {
   rotate.style = 'transform: rotate(' + rot + 'deg)';
-  rot +=360;
-  newQuote.style.color = "black" 
+  rot +=360 +360;
+  newQuote.style.color = "whitesmoke" 
 })
 
 //generate new quote and render it to the DOM
